@@ -19,8 +19,6 @@ public class DDDDDDAction extends AnAction {
 
     @Override
     public void actionPerformed(AnActionEvent e) {
-        // TODO: insert action logic here
-        System.out.println(1111);
         // 获取当前项目的主窗口状态栏
         StatusBar statusBar = WindowManager.getInstance().getStatusBar(e.getProject());
 

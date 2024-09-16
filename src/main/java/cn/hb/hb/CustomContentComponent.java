@@ -26,9 +26,9 @@ public class CustomContentComponent extends JPanel {
 
         // 创建单选按钮
         buttonGroup = new ButtonGroup();
-        radioButton1 = new JRadioButton("Option 1");
-        radioButton2 = new JRadioButton("Option 2");
-        radioButton3 = new JRadioButton("Option 3");
+        radioButton1 = new JRadioButton("int");
+        radioButton2 = new JRadioButton("string");
+        radioButton3 = new JRadioButton("id");
 
         buttonGroup.add(radioButton1);
         buttonGroup.add(radioButton2);
@@ -60,7 +60,7 @@ public class CustomContentComponent extends JPanel {
         });
 
         JPanel radioPanel = new JPanel();
-        radioPanel.setLayout(new BoxLayout(radioPanel, BoxLayout.Y_AXIS));
+        radioPanel.setLayout(new BoxLayout(radioPanel, BoxLayout.X_AXIS));
         radioPanel.add(radioButton1);
         radioPanel.add(radioButton2);
         radioPanel.add(radioButton3);
@@ -79,16 +79,6 @@ public class CustomContentComponent extends JPanel {
         });
         add(button, BorderLayout.SOUTH);
     }
-
-//    private String getSelectedRadioButtonValue() {
-//        ButtonModel selection = buttonGroup.getSelection();
-//        Object[] selectedObjects = selection.getSelectedObjects();
-//        AbstractButton selectedButton = (AbstractButton) selection;
-////        if (selectedButton != null) {
-////            return selectedButton.getText();
-////        }
-//        return "";
-//    }
 
     public JTextField getTextField() {
         return textField;
