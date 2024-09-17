@@ -5,16 +5,16 @@
 
     <!-- Public plugin name should be written in Title Case.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
-    <name>Hb</name>
+    <name>Random Super</name>
 
     <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
 
     <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
          Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
-    <description><![CDATA[
-        adasaadgfhddjgjhkhkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
-    ]]></description>
+<!--    <description><![CDATA[-->
+<!--        生成随机字符串、数字、id和列表数据，可自定义长度和数据类型。方便开发者快速生成数据-->
+<!--    ]]></description>-->
 
     <!-- Product and plugin compatibility requirements.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
@@ -31,7 +31,7 @@
         </action>
         <action id="DDDDDD" class="cn.hb.hb.DDDDDDAction" text="DDDDDD">
             <add-to-group group-id="HelpMenu" anchor="after" relative-to-action="About"/>
-            <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt Q"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt D"/>
         </action>
     </actions>
 </idea-plugin>

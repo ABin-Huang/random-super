@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "cn.hb"
-version = "1.0-SNAPSHOT"
+version = "0.1.0"
 
 repositories {
     mavenCentral()
@@ -24,7 +24,7 @@ intellij {
     // sandboxDir = System.getProperty("user.home") + "/idea-plugins-sandbox"
 
     //plugins.set(listOf(/* Plugin Dependencies */))
-    //updateSinceUntilBuild = false
+    updateSinceUntilBuild = false
 }
 
 tasks {
@@ -37,10 +37,16 @@ tasks {
 //    withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
 //        kotlinOptions.jvmTarget = "17"
 //    }
+    tasks.withType(JavaCompile) {
+        options.encoding = "UTF-8"
+        sourceCompatibility = "17"
+        targetCompatibility = "17"
+    }
 
     patchPluginXml {
         sinceBuild.set("232")
         untilBuild.set("242.*")
+        pluginDescription.set(file("src/main/resources/META-INF/description.html").getText())
     }
 
     signPlugin {
