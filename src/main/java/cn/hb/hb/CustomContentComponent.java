@@ -157,7 +157,6 @@ public class CustomContentComponent extends JPanel implements Disposable {
                 BaseFuncParam param = getParam();
                 Editor editor = actionEvent.getData(CommonDataKeys.EDITOR);
                 Project project = actionEvent.getProject();
-                System.out.println("我选择的：" +selectedValue);
                 String res = null;
                 try {
                     BaseFunction baseFunction = FuncFactory.get(TypeEnum.ofType(param.getFuncType()));

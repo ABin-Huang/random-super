@@ -14,8 +14,4 @@ public class FuncFactory {
     public static BaseFunction get(TypeEnum type) {
         return FuncHolder.getByType(type);
     }
-
-    public static void main(String[] args) {
-        System.out.println(FuncFactory.get(TypeEnum.STRING).generateResult(new BaseFuncParam()));
-    }
 }

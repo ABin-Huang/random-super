@@ -31,7 +31,7 @@ public class DDDDDDAction extends AnAction {
                 .setFocusable(true) // 允许弹窗接收焦点
                 .setRequestFocus(true) // 请求焦点
                 .setMovable(true) // 允许移动弹窗
-                .setTitle("First Plugin") // 设置弹窗标题
+                .setTitle("Random Super") // 设置弹窗标题
                 .setCancelOnClickOutside(false) // 阻止点击外部区域关闭弹窗
                 .setResizable(true) // 允许调整大小
                 .setModalContext(false) // 不阻止其他操作
