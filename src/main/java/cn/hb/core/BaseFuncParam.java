@@ -9,6 +9,7 @@ package cn.hb.core;
 public class BaseFuncParam {
     private Integer resLength;
     private Integer resNum;
+    private String funcType;
 
     public Integer getResLength() {
         return resLength;
@@ -24,5 +25,13 @@ public class BaseFuncParam {
 
     public void setResNum(Integer resNum) {
         this.resNum = resNum;
+    }
+
+    public String getFuncType() {
+        return funcType;
+    }
+
+    public void setFuncType(String funcType) {
+        this.funcType = funcType;
     }
 }

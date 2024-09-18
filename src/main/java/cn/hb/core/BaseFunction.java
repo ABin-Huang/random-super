@@ -1,5 +1,7 @@
 package cn.hb.core;
 
+import java.util.List;
+
 /**
  * @Author: abin
  * @Date: 2024/9/17 19:55
@@ -9,4 +11,5 @@ package cn.hb.core;
 public interface BaseFunction<T> {
     T generateResult(BaseFuncParam param);
     String getResult(BaseFuncParam param);
+    String getList(BaseFuncParam param);
 }

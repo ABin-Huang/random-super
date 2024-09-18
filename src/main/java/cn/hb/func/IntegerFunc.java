@@ -3,6 +3,7 @@ package cn.hb.func;
 import cn.hb.core.BaseFuncParam;
 import cn.hb.core.BaseFunction;
 
+import java.util.List;
 import java.util.Objects;
 import java.util.Random;
 
@@ -40,6 +41,20 @@ public class IntegerFunc implements BaseFunction<Long> {
 
     @Override
     public String getResult(BaseFuncParam param) {
-        return "" + generateResult(param);
+        if (Objects.isNull(param.getResNum())) {
+            return String.valueOf(generateResult(param));
+        }
+        return getList(param);
+    }
+
+    @Override
+    public String getList(BaseFuncParam param) {
+        Integer resNum = param.getResNum();
+        Integer resLength = param.getResLength();
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < resNum; i++) {
+            sb.append(generateRandomNumber(resLength)).append(",");
+        }
+        return sb.substring(0, sb.length()-1);
     }
 }

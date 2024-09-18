@@ -2,6 +2,7 @@ package cn.hb.func;
 
 import cn.hb.core.BaseFuncParam;
 import cn.hb.core.BaseFunction;
+import org.apache.commons.lang3.StringUtils;
 
 import java.security.SecureRandom;
 import java.util.Objects;
@@ -23,15 +24,24 @@ public class StringFunc implements BaseFunction<String> {
         for (int i = 0; i < length; i++) {
             sb.append(CHARACTERS.charAt(RANDOM.nextInt(CHARACTERS.length())));
         }
-        return sb.toString();
+        return "\"" + sb + "\"";
     }
 
     @Override
     public String getResult(BaseFuncParam param) {
-        return generateResult(param);
+        if (Objects.isNull(param.getResNum())) {
+            return generateResult(param);
+        }
+        return getList(param);
     }
 
-    public static void main(String[] args) {
-
+    @Override
+    public String getList(BaseFuncParam param) {
+        Integer resNum = param.getResNum();
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < resNum; i++) {
+            sb.append(generateResult(param)).append(",");
+        }
+        return sb.substring(0, sb.length()-1);
     }
 }
