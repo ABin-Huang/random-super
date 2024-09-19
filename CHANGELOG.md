@@ -4,5 +4,6 @@ This first release of the Random-super plugin provides basic function.
 ### Features
 * Insert random numbers at caret.
 * Insert random strings at caret.
+* Insert random id at caret.
 * Generate custom length numbers.
 * Generate custom length strings.

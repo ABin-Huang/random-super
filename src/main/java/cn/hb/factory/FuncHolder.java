@@ -2,6 +2,7 @@ package cn.hb.factory;
 
 import cn.hb.core.BaseFunction;
 import cn.hb.enums.TypeEnum;
+import cn.hb.func.IdFunc;
 import cn.hb.func.IntegerFunc;
 import cn.hb.func.StringFunc;
 
@@ -20,6 +21,7 @@ public class FuncHolder {
     static {
         funcMap.put(TypeEnum.STRING.getName(), new StringFunc());
         funcMap.put(TypeEnum.INTEGER.getName(), new IntegerFunc());
+        funcMap.put(TypeEnum.ID.getName(), new IdFunc());
     }
 
     public static BaseFunction getByType(TypeEnum type) {
