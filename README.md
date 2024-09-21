@@ -5,6 +5,19 @@ The Random Super IDEA plugin is a tool that allows developers to easily generate
 Currently supported data types are String, Integer, and Id, and can generate random numbers of a specified number of types.
 More data types will be supported in the future.
 
+## ✨ How to use
+To insert random data, press <kbd>Ctrl + Alt + D</kbd> to open the list of available templates and choose
+one that suits your task.
+By default, a different value is inserted at each caret.
+
+
+You can hold multiple modifier keys to combine their effects.
+
+Randomness can also be found in the main menu under <kbd>Tools</kbd> "Random super".
+
+<img width="450px" src=".github/img/use_random_super.gif" alt="Animation of how to insert data" />
+
+
 ## Features
 - Generate random integers, floats, and other numerical types.
 - Specify ranges for the random numbers.
